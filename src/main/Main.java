@@ -45,6 +45,7 @@ public class Main {
         stockmanger.initStocks();
         boolean expression = false;
         for (int i = 0; i < stockIds.size(); i++) {
+            System.out.println(i);
             stockmanger.addStock(stockIds.get(i), initialTimestamps.get(i), prices.get(i));
             expression = stockmanger.getStockPrice(stockIds.get(i)).equals(prices.get(i));
             Assert(expression);

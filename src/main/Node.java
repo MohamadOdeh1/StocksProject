@@ -8,9 +8,15 @@ public class Node<V,K extends Comparable<K>>{
     K key;
     V value;
     int size;
+    Stock stock;
     public Node(K key, V value){
         this.key = key;
         this.value = value;
+    }
+    public Node(K key, V value, Stock st){
+        this.key = key;
+        this.value = value;
+        this.stock = st;
     }
     public boolean isLeaf(){
         if(this.left == null && this.middle == null){
